@@ -1,9 +1,9 @@
 {
   "name": "latt-api",
   "version": "1.0.0",
-  "description": "Back End API For Latt Platform",
-  "author": "Fyodor Loenko",
-  "homepage": "https://latt-api.herokuapp.com",
+  "description": "REST API for Latt platform",
+  "author": "Fyodor L.",
+  "homepage": "https://github.com/latt-dev",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
