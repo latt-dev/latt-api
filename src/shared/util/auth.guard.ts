@@ -20,7 +20,9 @@ export class AuthGuard implements CanActivate {
 
     try {
       // TODO check if jwt.verify works correctly after update to v9
-      return await jwt.verify(token, process.env.LATT_JWT_SECRET_KEY, { algorithms: ['none'] }); // decoded token
+      return await jwt.verify(token, process.env.LATT_JWT_SECRET_KEY, {
+        /*algorithms: ['none']*/
+      }); // decoded token
     } catch (err) {
       const message = 'Token error: ' + (err.message || err.name);
       throw new HttpException(message, HttpStatus.UNAUTHORIZED);

@@ -42,8 +42,8 @@ export class UserEntity {
     const { userId, userName } = this;
     // TODO check if jwt.sign works correctly after update to v9
     return jwt.sign({ userId, userName }, process.env.LATT_JWT_SECRET_KEY, {
-      algorithm: 'RS256',
-      allowInsecureKeySizes: true,
+      // algorithm: 'none',
+      // allowInsecureKeySizes: false,
       expiresIn: process.env.LATT_JWT_EXP,
     });
   }
