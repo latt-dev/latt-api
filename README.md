@@ -17,12 +17,14 @@ _<sup>1</sup> You will need to add `.env` file with necessary [environment varia
 Create a `.env` file with the main environment variables (you can copy and rename `./.env.example`) required to run this project before starting to work with it:
 
 ```
-DB_TYPE=DataBaseType
-DB_HOST=DataBaseHostAddress
-DB_PORT=DataBasePort
+DB_TYPE=postgres
+DB_VERSION=14.6-alpine
+DB_NAME=DataBaseName
 DB_USERNAME=DataBaseUserName
 DB_PASSWORD=DataBasePassword
-DB_DATABASE=DataBaseName
+DB_VOLUME_PATH=/var/lib/postgresql/data
+DB_HOST=localhost
+DB_PORT=5432
 LATT_JWT_SECRET_KEY=YourLattJwtSecretKeyString
 LATT_JWT_EXP=LattJwtExpirationPeriod
 LATT_ADMIN_CODE=DopeLattAdminCode
